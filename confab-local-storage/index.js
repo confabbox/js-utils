@@ -208,4 +208,4 @@ class ConfabLocalStorage extends EventEmitter {
     }
 }
 
-export const ConfabLocalStorage = new ConfabLocalStorage();
+export const confabLocalStorage = new ConfabLocalStorage();
