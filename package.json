@@ -1,0 +1,51 @@
+{
+  "name": "js-utils",
+  "version": "2.0.1",
+  "description": "Utilities for Confab JS projects",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/confabbox/js-utils"
+  },
+  "keywords": [
+    "browser",
+    "confab",
+    "utils"
+  ],
+  "author": "",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "bowser": "2.7.0",
+    "js-md5": "0.7.3"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "babelify": "^10.0.0",
+    "babel-eslint": "^10.1.0",
+    "browserify": "^16.2.3",
+    "eslint": "^7.1.0",
+    "eslint-plugin-import": "2.24.0",
+    "eslint-plugin-require-path-exists": "^1.1.9"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    ]
+  },
+  "type": "module",
+  "main": "./index.js",
+  "license": "Apache-2.0"
+}
